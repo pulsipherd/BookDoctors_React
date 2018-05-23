@@ -4,4 +4,5 @@
   <h2><%= book.title %></h2>
   <%= link_to 'Show Book', book_path(book) %>
   <%= link_to 'Edit Book', edit_book_path(book) %>
+  <%= link_to 'Burn Book', book, method: :delete %>
 <% end %>
