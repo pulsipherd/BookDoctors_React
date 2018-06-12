@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ 
+section.bigtext {
+  height: 100 px;
+  width: 500 px;
+}
+
+div {}

@@ -1,4 +1,8 @@
+<%= button_to  "Log Out", destroy_user_session_path, method: :delete %> </h2>
+<h2>Welcome <%= current_user.first_name%>!</h2>
+
 <h1> Books </h1>
+
 <p><%= link_to 'New Book', new_book_path %></p>
 <% @books.each do |book| %>
   <h2><%= book.title %></h2>

@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  get 'accounts/index'
+  get 'accounts/show'
+  get 'accounts/new'
+  get 'accounts/edit'
+  devise_for :users
+  root 'books#index'
 
   get '/about', to: 'static_pages#about'
-resources :books
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-end
+  resources :books
+ end

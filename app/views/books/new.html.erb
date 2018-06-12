@@ -1,16 +1,16 @@
 <h1>New Book</h1>
 <%= form_for @book do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <div><%= f.label :title %>
+  <%= f.text_field :title %></div>
 
-  <%= f.label :author %>
-  <%= f.text_field :author %>
+  <div><%= f.label :author %>
+  <%= f.text_field :author %></div>
 
-  <%= f.label :body %>
-  <%= f.text_area :body %>
+  <div><%= f.label :body %>
+ <section class="bigtext"> <%= f.text_area :body %></section></div>
 
-  <%= f.label :keywords %>
-  <%= f.text_field :keywords %>
+  <div><%= f.label :keywords %>
+  <%= f.text_field :keywords %></div>
 
   <%= f.submit %>
 <% end %>
