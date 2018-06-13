@@ -1,12 +1,20 @@
 <%= button_to  "Log Out", destroy_user_session_path, method: :delete %> </h2>
 <h2>Welcome <%= current_user.first_name%>!</h2>
-
-<h1> Books </h1>
-
+<p id="notice"><%= notice %></p>
+<h1 class= "ui header"> Books </h1>
+<table class="ui striped table">
+<thead>
+<tr class="center aligned">
 <p><%= link_to 'New Book', new_book_path %></p>
+</thead>
+<tbody>
 <% @books.each do |book| %>
+  <tr class="center aligned">
   <h2><%= book.title %></h2>
-  <%= link_to 'Show Book', book_path(book) %>
-  <%= link_to 'Edit Book', edit_book_path(book) %>
-  <%= link_to 'Burn Book', book, method: :delete %>
+  <div class="ui three item">
+  <button class="ui secondary basic button"><%= link_to 'Show Book', book_path(book) %></button>
+  <button class="ui secondary basic button"><%= link_to 'Edit Book', edit_book_path(book) %></button>
+  <button class="ui secondary basic button"><%= link_to 'Burn Book', book, method: :delete %></button>
+  </div>
+</tbody></table>
 <% end %>

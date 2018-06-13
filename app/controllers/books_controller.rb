@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-  before_action :set_account, only: [:show, :edit, :update, :destroy]
+  # before_action :set_account, only: [:show, :edit, :update, :destroy]
   def index
     @books = Book.all
   end
