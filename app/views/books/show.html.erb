@@ -1,6 +1,6 @@
 <h1><%= @book.title %></h1>
 <h4><%= @book.author %></h4>
 <p><%= simple_format(@book.body) %></p>
-<div class="ui right sidebar"> <%= @book.keywords %></div>
+ <%= @book.keywords %>
 <button class="ui secondary basic button"><%= link_to  "Back", books_path %></button>
 <button class="ui secondary basic button"><%= link_to 'Edit Book', edit_book_path(@book) %></button>
