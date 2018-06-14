@@ -1,7 +1,7 @@
 <h1>Edit Page</h1>
 <%= form_for @book do |f| %>
   <%= f.label :title %> 
-  <%= f.text_field :title %> <br><br>
+  <%= f.text_field :title, autofocus: true %> <br><br>
 
   <%= f.label :author %>
   <%= f.text_field :author %><br><br>
